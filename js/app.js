@@ -1,5 +1,3 @@
-'use strict'
-
 const lista = [
   {
     id: 1,
