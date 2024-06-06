@@ -68,6 +68,7 @@ function criarCards(lista) {
     card.classList.add('border-success');
     card.classList.add('border-3');
     card.style.width = '18rem';
+    card.style.float = 'left';
     card.id = item.id;
 
     const img = document.createElement('img');
@@ -129,7 +130,6 @@ function criarModal(item) {
   const content = document.createElement('div');
   content.classList.add('modal-content');
   content.classList.add('bg-black');
-
   content.classList.add('border-success');
   content.classList.add('border-3');
   content.style.color = "rgb(116,249,75)"
@@ -173,7 +173,8 @@ function criarModal(item) {
   buttonFooter.textContent = 'Abrir Loja';
 
   buttonFooter.addEventListener('click', function () {
-    window.open(item.link);
+    console.log(item.link);
+    window.open(item.link)
   });
 
   header.append(title, buttonHeader);
@@ -185,3 +186,24 @@ function criarModal(item) {
 }
 
 criarCards(lista);
+
+
+const btn = document.getElementById('button')
+
+btn.addEventListener('click', () => {
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const mensagem = document.getElementById("mensagem").value;
+  if(nome == "" || email == "" || mensagem == ""){
+      var modal = new bootstrap.Modal(document.getElementById('modalError'), {
+        keyboard: false
+      });
+      modal.show();
+
+  }else{
+    var modal = new bootstrap.Modal(document.getElementById('modalSuccess'), {
+      keyboard: false
+    });
+    modal.show();
+  }
+})

@@ -1,0 +1,62 @@
+main {
+    color: rgb(116, 249, 75);
+
+}
+
+.home {
+    height: 90dvh;
+    width: 100%;
+    background-image: url("../assets/Steam-verde.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container__home {
+    width: 200px;
+    height: 150px;
+    padding-top: 300px;
+    margin-left: 200px;
+}
+
+.container__home h1 {
+    width: 190px;
+    text-align: center;
+    animation-duration: 4s;
+    animation-name: animacao2;
+}
+
+
+
+.card {
+    margin: 0 25px;
+}
+
+
+.line {
+    width: 5px;
+    height: 240px;
+    background-color: rgb(116, 249, 75);
+    animation-duration: 3s;
+    animation-name: animacao1;
+}
+
+@keyframes animacao1 {
+    from {
+        transform: translatey(-200%)
+    }
+
+    to {
+        transform: translatey(0%);
+    }
+}
+
+@keyframes animacao2 {
+    from {
+        transform: translateX(-150%)
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
