@@ -37,6 +37,24 @@ const lista = [
 
   },
   {
+    id: 4,
+    title: "The Witcher 3: Wild Hunt",
+    text: `Você é Geralt, da cidade de Rívia. Ao seu redor, todas as cidades e os povoados dos Reinos do Norte estão sendo devastados pela força sobrenatural de um exército invasor, conhecido apenas como Caçada Selvagem, que deixa um rastro sangrento de pura destruição por onde passa.
+    Você descobrirá uma história complexa e envolvente e conhecerá personagens inesquecíveis enquanto se prepara para um confronto estrondoso com a Caçada Selvagem. Ao explorar os Reinos do Norte, você descobrirá que há mistérios à espreita em cada vilarejo, árvore e sombra.`,
+    img: "../assets/witcher3.webp",
+    link:"https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
+
+  },
+    {
+    id: 4,
+    title: "The Witcher 3: Wild Hunt",
+    text: `Você é Geralt, da cidade de Rívia. Ao seu redor, todas as cidades e os povoados dos Reinos do Norte estão sendo devastados pela força sobrenatural de um exército invasor, conhecido apenas como Caçada Selvagem, que deixa um rastro sangrento de pura destruição por onde passa.
+    Você descobrirá uma história complexa e envolvente e conhecerá personagens inesquecíveis enquanto se prepara para um confronto estrondoso com a Caçada Selvagem. Ao explorar os Reinos do Norte, você descobrirá que há mistérios à espreita em cada vilarejo, árvore e sombra.`,
+    img: "../assets/witcher3.webp",
+    link:"https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
+
+  },
+  {
     id: 5,
     title: "Hogwarts Legacy",
     text: `Hogwarts Legacy é um RPG de ação imersivo e de mundo aberto ambientado no mundo introduzido pela primeira vez nos livros do Harry Potter. Embarque em uma jornada por locais novos e familiares enquanto explora e descubra animais fantásticos, personalize seu personagem e crie poções, domine o lançamento de feitiços, aprimore talentos e torne-se o bruxo que deseja ser.
@@ -47,33 +65,63 @@ const lista = [
   
 ];
 
+criarCards(lista);
+
+criarCarrossel()
 localStorage.setItem("id", '1')
 
 function limitarTexto(texto) {
-  if (texto.length > 240) {
-    return texto.slice(0, 240) + "...";
+  if (texto.length > 245) {
+    return texto.slice(0, 245) + "...";
   } else {
     return texto;
   }
 }
 
+function criarCarrossel() {
+  console.log(window.innerWidth);
+  const carouselSlide = document.querySelector('.container__card');
+  const cards = document.querySelectorAll('.card-carousel');
+
+  let counter = 0;
+  const cardWidth = cards[0].clientWidth + 55;
+
+  function slide() {
+    carouselSlide.style.transform = `translateX(${-cardWidth * counter}px)`;
+  }
+
+  document.querySelector('.proximo-btn').addEventListener('click', () => {
+    if(window.innerWidth <= 700){
+      if (counter >= cards.length ) return;
+    }else{
+      if (counter >= cards.length - 4) return;
+    }
+    counter++;
+    slide();
+  });
+
+  document.querySelector('.anterior-btn').addEventListener('click', () => {
+    if (counter <= 0) return;
+    counter--;
+    slide();
+  });
+
+}
+
+
 function criarCards(lista) {
   const container = document.getElementById('container__card');
 
   lista.forEach(item => {
-
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('card-carousel');
     card.classList.add('border');
     card.classList.add('border-success');
     card.classList.add('border-3');
-    card.style.width = '18rem';
-    card.style.float = 'left';
     card.id = item.id;
 
     const img = document.createElement('img');
     img.classList.add('card-img-top');
-    img.style.height = '22rem';
     img.src = item.img;
 
     const cardBody = document.createElement('div');
@@ -185,7 +233,6 @@ function criarModal(item) {
   modal.append(dialog);
 }
 
-criarCards(lista);
 
 
 const btn = document.getElementById('button')

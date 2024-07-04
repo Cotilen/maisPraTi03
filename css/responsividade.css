@@ -1,0 +1,40 @@
+@media (max-width: 425px) {
+    .contato{
+        display: none;
+    }
+
+    .container__home {
+        display: flex;
+        width: 200px;
+        height: 150px;
+        padding-top: 20px;
+        
+        margin-left: 0;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .container__games{
+        height: auto;
+    }
+    
+    .card-carousel {
+        min-width: 100px;
+        width: 200px;
+        min-height: 500px;
+        background-color: white;
+        color: black;
+        padding-bottom: 10px;
+    }
+
+   .games img{
+    height: 200px; 
+   }
+
+   .card-text{
+    height: 250px;
+   }
+
+}
