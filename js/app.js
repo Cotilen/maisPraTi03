@@ -82,16 +82,25 @@ function criarCarrossel() {
   console.log(window.innerWidth);
   const carouselSlide = document.querySelector('.container__card');
   const cards = document.querySelectorAll('.card-carousel');
+  let cardWidth
 
   let counter = 0;
-  const cardWidth = cards[0].clientWidth + 55;
+  if(innerWidth <= 425){
+    cardWidth = cards[0].clientWidth + 66;
+
+  }else{
+    cardWidth = cards[0].clientWidth + 55;
+
+  }
 
   function slide() {
     carouselSlide.style.transform = `translateX(${-cardWidth * counter}px)`;
   }
 
   document.querySelector('.proximo-btn').addEventListener('click', () => {
-    if(window.innerWidth <= 700){
+    if(window.innerWidth <= 425){
+      if (counter >= cards.length - 1) return;
+    }else if(window.innerWidth <= 700){
       if (counter >= cards.length ) return;
     }else{
       if (counter >= cards.length - 4) return;

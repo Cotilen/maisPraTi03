@@ -1,40 +1,51 @@
 @media (max-width: 425px) {
-    .contato{
-        display: none;
-    }
-
     .container__home {
         display: flex;
         width: 200px;
         height: 150px;
         padding-top: 20px;
-        
-        margin-left: 0;
+
+        margin-left: 5px;
     }
 
-    .line{
+    .line {
         display: none;
     }
 
-    .container__games{
+    .container__games {
         height: auto;
     }
-    
+
     .card-carousel {
         min-width: 100px;
-        width: 200px;
+        width: 250px;
         min-height: 500px;
         background-color: white;
         color: black;
         padding-bottom: 10px;
+        margin-left: 12px;
     }
 
-   .games img{
-    height: 200px; 
-   }
+    .games img {
+        height: 250px;
+    }
 
-   .card-text{
-    height: 250px;
-   }
+    .card-text {
+        height: 250px;
+        padding: 3px;
+    }
+
+    .contato{
+        flex-direction: column;
+    }
+
+    .contato img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .contatos{
+        width: 300px;
+    }
 
 }

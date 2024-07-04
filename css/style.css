@@ -32,7 +32,7 @@ main {
 .carrossel-container {
     display: flex;
     overflow: hidden;
-    height: 90dvh;
+   height: auto;
     position: relative;
     width: 98%;
     padding-left: 45px;
@@ -62,7 +62,7 @@ main {
     animation-name: animacao1;
 }
 
-.card-text{    
+.card-text {
     word-wrap: break-word;
     text-align: start;
 }
@@ -77,7 +77,7 @@ main {
     color: blue;
 }
 
-.games img{
+.games img {
     height: 350px;
 }
 
@@ -102,11 +102,9 @@ main {
     right: 1px;
 }
 
-.contato{
+.contato {
     margin: 0px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+
 }
 
 .contato button {
@@ -122,6 +120,12 @@ main {
 .contato button:hover {
     background-color: rgb(116, 249, 75);
     color: black;
+}
+
+.contatos {
+    height: 485px;
+    width: 600px;
+    padding: 20px;
 }
 
 
