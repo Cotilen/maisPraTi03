@@ -87,7 +87,7 @@ function createGame() {
 }
 
 
-function createRowTable(){
+function createRowTable(lista){
   const table = document.getElementById('table')
   table.innerHTML = ''
   lista.games.forEach(item => {
