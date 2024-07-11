@@ -1,17 +1,4 @@
 @media (max-width: 425px) {
-    .container__home {
-        display: flex;
-        width: 200px;
-        height: 150px;
-        padding-top: 20px;
-
-        margin-left: 5px;
-    }
-
-    .line {
-        display: none;
-    }
-
     .container__games {
         height: auto;
     }
@@ -21,9 +8,8 @@
         width: 250px;
         min-height: 500px;
         background-color: white;
-        color: black;
+        color: var(--primary-color);
         padding-bottom: 10px;
-        margin-left: 12px;
     }
 
     .games img {
@@ -48,4 +34,55 @@
         width: 300px;
     }
 
+}
+
+@media(max-width: 768px){
+
+    .container__home {
+        display: flex;
+        width: 200px;
+        height: 150px;
+        padding-top: 20px;
+
+        margin-left: 5px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .carrossel-container{
+        padding-left: 7%;
+    }
+
+    .contato img{
+        height: 485px;
+        width: 600px;
+    }
+    
+    .contato{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 1024px){
+    .container__home {
+        display: flex;
+        padding-top: 50px;
+
+        margin-left: 30px;
+    }
+
+    .carrossel-container{
+        padding-left: 7%;
+    }
+    .contato img{
+        display: none;
+    }   
+}
+
+@media(max-width: 1440px){
+    .carrossel-container{
+        padding-left: 5%;
+    }
 }

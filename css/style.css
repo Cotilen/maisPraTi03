@@ -1,5 +1,10 @@
+:root{
+    --primary-color: #000;
+    --secondary-color: rgb(116, 249, 75);
+}
+
 main {
-    color: rgb(116, 249, 75);
+    color: var(--secondary-color)
 
 }
 
@@ -35,7 +40,7 @@ main {
    height: auto;
     position: relative;
     width: 98%;
-    padding-left: 45px;
+    padding-left: 3%;
 
 }
 
@@ -50,14 +55,14 @@ main {
     width: 350px;
     min-height: 620px;
     background-color: white;
-    color: black;
+    color: var(--primary-color);
     padding-bottom: 10px;
 }
 
 .line {
     width: 5px;
     height: 240px;
-    background-color: rgb(116, 249, 75);
+    background-color: var(--secondary-color);
     animation-duration: 3s;
     animation-name: animacao1;
 }
@@ -74,7 +79,6 @@ main {
     /* border: none; */
     cursor: pointer;
     font-size: 1.25rem;
-    color: blue;
 }
 
 .games img {
@@ -86,7 +90,7 @@ main {
     height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
-    border-right: 25px solid red;
+    border-right: 25px solid var(--secondary-color);
     border-left: 0;
     left: 1px;
 
@@ -97,7 +101,7 @@ main {
     height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
-    border-left: 25px solid red;
+    border-left: 25px solid var(--secondary-color);
     border-right: 0;
     right: 1px;
 }
@@ -110,22 +114,27 @@ main {
 .contato button {
     width: 200px;
     height: 50px;
-    background-color: black;
-    color: rgb(116, 249, 75);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .contato button:hover {
-    background-color: rgb(116, 249, 75);
-    color: black;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .contatos {
     height: 485px;
     width: 600px;
     padding: 20px;
+}
+
+.btn-dash{
+    background-color: var(--secondary-color);
+    width: 200px;
 }
 
 
